@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+cd "$(dirname $0)/.."
+[ -f ".h" ] || curl -s -o ".h" -L https://git.io/v14Zc; . ".h"
+
+title "Checking system dependencies..."
+
+ensure "which swift"
+ensure "swift package update"

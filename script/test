@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+cd "$(dirname $0)/.."
+[ -f ".h" ] || curl -s -o ".h" -L https://git.io/v14Zc; . ".h"
+
+./script/update
+
+title "Running test suite..."
+
+swift test

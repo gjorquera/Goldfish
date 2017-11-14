@@ -1,4 +1,7 @@
 .DS_Store
+.cache.*
+.h
 /*.xcodeproj
 /.build
+/Package.resolved
 /Packages
