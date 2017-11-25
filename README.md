@@ -3,15 +3,6 @@
 A highly opinionated [The Pomodoro Technique][the-pomodoro-technique] macOS
 timer.
 
-## Features
-
-- Highly opinionated, no configuration.
-- No useless GUIs to handle Pomodoros or tasks.
-- Only Start/Stop. Pausing a Pomodoro is cheating.
-- No break timer. Take all the time you need after finishing.
-- Subtle bell sound when the Pomodoro is about to finish.
-- Annoying alarm sound when the Pomodoro finishes.
-
 ## Why?
 
 Several years ago I wrote a [blog post][blog-post] about how I use Todoist and
@@ -28,6 +19,15 @@ liked it. But there were two things that bothered me:
 
 Since no timer was an exact fit for me and because I use it every day, I decided
 to write my own.
+
+## Features
+
+- Highly opinionated, no configuration.
+- No useless GUIs to handle Pomodoros or tasks.
+- Only Start/Stop. Pausing a Pomodoro is cheating.
+- No break timer. Take all the time you need after finishing.
+- Subtle bell sound when the Pomodoro is about to finish.
+- Annoying alarm sound when the Pomodoro finishes.
 
 ## Why Goldfish?
 
