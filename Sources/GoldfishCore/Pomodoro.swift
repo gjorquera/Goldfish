@@ -32,7 +32,7 @@ public class Pomodoro {
     self.timer = self.toggler.switchBetween(countdownInterval, stoppedInterval)
 
     self.hint = self.timer.filter { $0 == hintTime }.map { _ in () }
-    self.finished = self.timer.filter { $0 == 0 }.map { _ in () }
+    self.finished = self.timer.filter { $0 == 0 }.map { _ in () }.share(replay: 1)
 
     _ = self.finished.subscribe(onNext: toggle)
   }

@@ -17,6 +17,8 @@ class GoldfishApp : NSObject, NSApplicationDelegate {
 
     pomodoro.onToggle { self.startStop.title = $0 ? "Stop" : "Start" }
     pomodoro.onTimer { self.systemBar.title = Clock.label(time: $0) }
+    pomodoro.onHint { self.playSound("hint") }
+    pomodoro.onFinished { self.playSound("alarm") }
   }
 
   @objc func startStopAction(_ sender: NSMenuItem) {
@@ -25,6 +27,12 @@ class GoldfishApp : NSObject, NSApplicationDelegate {
 
   @objc func quitAction(_ sender: NSMenuItem) {
     NSApp.terminate(self)
+  }
+
+  private func playSound(_ name: String) {
+    let path = Bundle.main.path(forResource: name, ofType: "mp3")
+    let url = URL(fileURLWithPath: path!)
+    NSSound(contentsOf: url, byReference: true)!.play()
   }
 }
 
