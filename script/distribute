@@ -4,7 +4,7 @@ cd "$(dirname $0)/.."
 
 ./script/test
 
-title "Building..."
+title "Building release target..."
 
 swift build --configuration release
 
@@ -12,7 +12,9 @@ title "Creating distribution package..."
 
 rm -rf Output
 mkdir Output
+
 cp -r Assets/Goldfish.app Output/
 cp .build/release/Goldfish Output/Goldfish.app/Contents/MacOS/
+iconutil -c icns -o Output/Goldfish.app/Contents/Resources/iconfile.icns Assets/iconfile.iconset
 
 title "done!"

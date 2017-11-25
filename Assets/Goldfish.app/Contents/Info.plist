@@ -4,5 +4,7 @@
 <dict>
   <key>CFBundleExecutable</key>
   <string>Goldfish</string>
+  <key>CFBundleIconFile</key>
+  <string>iconfile</string>
 </dict>
 </plist>
