@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+cd "$(dirname $0)/.."
+[ -f ".h" ] || curl -s -o ".h" -L https://git.io/v14Zc; . ".h"
+
+./script/test
+
+title "Building..."
+
+swift build --configuration release
+
+title "Creating distribution package..."
+
+rm -rf Output
+mkdir Output
+cp -r Assets/Goldfish.app Output/
+cp .build/release/Goldfish Output/Goldfish.app/Contents/MacOS/
+
+title "done!"

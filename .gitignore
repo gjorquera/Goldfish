@@ -3,5 +3,6 @@
 .h
 /*.xcodeproj
 /.build
+/Output
 /Package.resolved
 /Packages
