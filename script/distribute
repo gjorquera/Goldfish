@@ -2,6 +2,8 @@
 cd "$(dirname $0)/.."
 [ -f ".h" ] || curl -s -o ".h" -L https://git.io/v14Zc; . ".h"
 
+set -e
+
 ./script/test
 
 title "Building release target..."
