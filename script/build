@@ -10,5 +10,6 @@ title "Building debug target..."
 
 swift build
 
+echo ""
 echo "done!"
 echo "=> To open Goldfish, run: ./.build/debug/Goldfish"

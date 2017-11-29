@@ -20,7 +20,8 @@ cp -r Assets/Goldfish.app Output/
 cp .build/release/Goldfish Output/Goldfish.app/Contents/MacOS/
 iconutil -c icns -o Output/Goldfish.app/Contents/Resources/iconfile.icns Assets/iconfile.iconset
 
-hdiutil create -fs HFS+ -srcfolder Output -volname Goldfish Goldfish.dmg
+hdiutil create -fs HFS+ -srcfolder Output -volname Goldfish Output/Goldfish.dmg
 
+echo ""
 echo "done!"
 echo "=> Distributable files are located in Output/"
