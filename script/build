@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+cd "$(dirname $0)/.."
+[ -f ".h" ] || curl -s -o ".h" -L https://git.io/v14Zc; . ".h"
+
+set -e
+
+./script/update
+
+title "Building debug target..."
+
+swift build
+
+echo "done!"
+echo "=> To open Goldfish, run: ./.build/debug/Goldfish"

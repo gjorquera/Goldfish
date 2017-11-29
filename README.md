@@ -29,6 +29,24 @@ to write my own.
 - Subtle alarm sound when the Pomodoro is about to finish.
 - Very annoying alarm sound when the Pomodoro finishes.
 
+## System Requirements
+
+* Swift 4.0
+
+## Development
+
+To execute the test suite, run:
+
+    ./script/test
+
+To build Goldfish in debug, run:
+
+    ./script/build
+
+To build Goldfish in release and create a distributable dmg, run:
+
+    ./script/distribute
+
 ## Why Goldfish?
 
 According to [Statistic Brain][statistic-brain] the average attention span of a
