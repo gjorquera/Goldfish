@@ -38,5 +38,6 @@ class GoldfishApp : NSObject, NSApplicationDelegate {
 
 let app = NSApplication.shared
 app.setActivationPolicy(.accessory)
-app.delegate = GoldfishApp()
+let delegate = GoldfishApp()
+app.delegate = delegate
 app.run()
